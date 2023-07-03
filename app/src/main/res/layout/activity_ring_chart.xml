@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.RingChartActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.dbz.view.view.RingChartVing
+        android:id="@+id/ringChartView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:dbz_circle_radius_size="70dp"
+        app:dbz_circle_radius_text_size="13dp"
+        app:dbz_radius_color="@color/white"
+        app:dbz_radius_size="40dp"
+        app:dbz_ring_background_color="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <com.dbz.view.view.RingChartVing
+        android:id="@+id/ringChartView2"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="10dp"
+        app:dbz_circle_radius_size="50dp"
+        app:dbz_circle_radius_text_size="13dp"
+        app:dbz_radius_color="@color/white"
+        app:dbz_radius_size="28dp"
+        app:dbz_ring_background_color="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ringChartView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ringChartView2">
+
+        <com.dbz.view.view.RingChartVing
+            android:id="@+id/ringChartView3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:dbz_circle_radius_size="50dp"
+            app:dbz_circle_radius_text_size="13dp"
+            app:dbz_radius_color="@color/white"
+            app:dbz_radius_size="20dp"
+            app:dbz_ring_background_color="@color/white" />
+
+        <com.dbz.view.view.RingChartVing
+            android:id="@+id/ringChartView4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            app:dbz_circle_radius_size="50dp"
+            app:dbz_circle_radius_text_size="13dp"
+            app:dbz_radius_color="@color/white"
+            app:dbz_radius_size="25dp"
+            app:dbz_ring_background_color="@color/white"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

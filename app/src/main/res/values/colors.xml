@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="colorPrimary">@color/purple_200</color>
+
+    <color name="color_white">#FFFFFFFF</color>
+    <!--  不透明70%  -->
+    <color name="popup_state_background">#B3000000</color>
+
+    <color name="blue">#800096f0</color>
+    <color name="blue_color">#0096f0</color>
+    <color name="green_color">#16C66D</color>
+    <color name="red">#ff0000</color>
+    <color name="orange">#ff9929</color>
+    <color name="yellow">#FFF726</color>
+    <color name="color_bg">#cccccc</color>
+
+    <color name="color_81dddb">#81dddb</color>
+    <color name="color_4AFFFF">#4AFFFF</color>
+
+    <color name="color_80222229">#80222229</color>
+    <color name="color_323233">#323233</color>
+    <color name="color_969799">#969799</color>
+    <color name="color_F2F3F5">#F2F3F5</color>
+    <color name="color_ECEDF1">#ECEDF1</color>
+
+
+</resources>

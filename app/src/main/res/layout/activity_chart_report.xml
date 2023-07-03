@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ChartReportActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.dbz.view.view.ChartReportView
+        android:id="@+id/chartview1"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="15dp"
+        app:dbz_background_color="@color/blue_color"
+        app:dbz_line_point_color="@color/color_4AFFFF"
+        app:dbz_line_width="1dp"
+        app:dbz_point_interval="30dp"
+        app:dbz_point_text_color="@color/white"
+        app:dbz_point_text_size="13dp"
+        app:dbz_x_y_color="@color/color_4AFFFF"
+        app:dbz_x_y_text_color="@color/color_4AFFFF"
+        app:dbz_x_y_text_size="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <com.dbz.view.view.ChartReportView
+        android:id="@+id/chartview2"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="15dp"
+        app:dbz_background_color="@color/white"
+        app:dbz_line_point_color="@color/blue_color"
+        app:dbz_line_width="1dp"
+        app:dbz_point_interval="50dp"
+        app:dbz_point_text_color="@color/white"
+        app:dbz_point_text_size="13dp"
+        app:dbz_point_color="@color/blue"
+        app:dbz_x_y_color="@color/blue_color"
+        app:dbz_x_y_text_color="@color/blue_color"
+        app:dbz_x_y_text_size="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chartview1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,102 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'version-catalog'
+}
+
+android {
+    compileSdk libs.versions.compilesdk.get().toInteger()
+    defaultConfig {
+        applicationId "com.dbz.view"
+        minSdk libs.versions.minsdk.get().toInteger()
+        targetSdk libs.versions.targetsdk.get().toInteger()
+        versionCode libs.versions.versioncode.get().toInteger()
+        versionName libs.versions.versionname.get()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    viewBinding {
+        enabled = true
+    }
+    namespace 'com.dbz.view'
+}
+
+catalog {
+    versionCatalog {
+        from files('../libs.versions.toml')
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation libs.bundles.androidx
+    implementation libs.bundles.lifecycle
+    implementation libs.bundles.glide
+    implementation libs.bundles.retrofit
+    implementation libs.logging.interceptor
+
+    implementation libs.baserecyclerview
+    implementation libs.circleimageview
+    implementation libs.mmkv
+    implementation libs.basepopup
+    implementation libs.utilcodex
+    implementation libs.permissionx
+    implementation libs.rxandroid
+    implementation libs.rxbinding
+    implementation libs.immersionbar
+    implementation libs.immersionbar.ktx
+    implementation libs.pictureselector
+    implementation libs.xxpermissions
+    implementation libs.emoji
+
+    // CameraX core library
+    def camerax_version = "1.2.0-alpha04"
+    // CameraX view library
+    //noinspection GradleDependency
+    implementation "androidx.camera:camera-core:$camerax_version"
+    // If you want to use Camera2 extensions
+    //noinspection GradleDependency
+    implementation "androidx.camera:camera-camera2:$camerax_version"
+    // If you to use the Camera View class
+    //noinspection GradleDependency
+    implementation "androidx.camera:camera-view:$camerax_version"
+    // CameraX Lifecycle library
+    //noinspection GradleDependency
+    implementation "androidx.camera:camera-lifecycle:$camerax_version"
+    // CameraX video
+    //noinspection GradleDependency
+    implementation "androidx.camera:camera-video:${camerax_version}"
+
+    // PhotoView
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    // custom camera view
+    implementation 'com.otaliastudios:cameraview:2.7.2'
+
+    // 头条适配
+    implementation project(path: ':LocalPackage:AutoSize_aar')
+    // 上拉刷新下拉加载
+    implementation project(path: ':LocalPackage:SmartRefreshLayout_aar')
+    implementation project(path: ':LocalPackage:SmartRefreshHeader_aar')
+}

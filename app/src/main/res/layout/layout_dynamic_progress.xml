@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_progressbar"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_yellow_radius_5"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/progress_speed" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_num"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_triangle"
+            android:layout_width="23dp"
+            android:layout_height="10dp"
+            android:src="@drawable/shape_revision_yellow_back" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_50">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_revision"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@drawable/progress_revision"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_20"
+            android:layout_alignParentEnd="true"
+            android:background="#33ABF3" />
+
+    </RelativeLayout>
+
+</LinearLayout>

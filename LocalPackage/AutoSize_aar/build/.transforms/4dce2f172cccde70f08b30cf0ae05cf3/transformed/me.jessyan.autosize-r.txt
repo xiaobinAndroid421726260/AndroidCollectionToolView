@@ -1,0 +1,2 @@
+me.jessyan.autosize
+string app_name

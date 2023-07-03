@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="font_size_dp_10" format="dimension" />
+    <attr name="font_size_dp_11" format="dimension" />
+    <attr name="font_size_dp_12" format="dimension" />
+    <attr name="font_size_dp_13" format="dimension" />
+    <attr name="font_size_dp_14" format="dimension" />
+    <attr name="font_size_dp_15" format="dimension" />
+    <attr name="font_size_dp_16" format="dimension" />
+    <attr name="font_size_dp_17" format="dimension" />
+    <attr name="font_size_dp_18" format="dimension" />
+    <attr name="font_size_dp_19" format="dimension" />
+    <attr name="font_size_dp_20" format="dimension" />
+    <attr name="font_size_dp_21" format="dimension" />
+    <attr name="font_size_dp_22" format="dimension" />
+    <attr name="font_size_dp_23" format="dimension" />
+    <attr name="font_size_dp_24" format="dimension" />
+    <attr name="font_size_dp_25" format="dimension" />
+
+    <declare-styleable name="FlowCameraView">
+        <attr name="iconSize" format="dimension"/>
+        <attr name="iconMargin" format="dimension"/>
+        <attr name="iconSrc" format="reference"/>
+        <attr name="iconLeft" format="reference"/>
+        <attr name="iconRight" format="reference"/>
+        <attr name="duration_max" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="DynamicProgressBar">
+        <attr name="dbz_back_drawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundRelativeLayout">
+        <attr name="dbz_layout_radius" format="dimension" />
+        <attr name="dbz_clip_back_ground" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomHorizontalProgressBar">
+        <attr name="dbz_radius" format="dimension" />
+        <attr name="dbz_progress_max" format="integer" />
+        <attr name="dbz_progress" format="integer" />
+        <attr name="dbz_progress_bar_back_color" format="color" />
+        <attr name="dbz_progress_color" format="color" />
+        <attr name="dbz_progress_bar_text_color" format="color" />
+        <attr name="dbz_is_show_progress_text" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="LineChartView">
+        <!-- x轴线颜色 -->
+        <attr name="dbz_x_line_color" format="color" />
+        <!-- x轴线的宽度 -->
+        <attr name="dbz_x_line_width" format="dimension" />
+        <!-- x轴上的文字颜色 -->
+        <attr name="dbz_x_text_color" format="color" />
+        <!-- x轴上的文字大小 -->
+        <attr name="dbz_x_text_size" format="dimension" />
+        <!-- 折线点位文本大小 -->
+        <attr name="dbz_dot_text_size" format="dimension" />
+        <!-- 折线点位文字颜色 -->
+        <attr name="dbz_dot_text_color" format="color" />
+        <!-- 折线的颜色 -->
+        <attr name="dbz_line_chart_color" format="color" />
+        <!-- 背景颜色 -->
+        <attr name="dbz_back_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ChartReportView">
+        <!-- 背景颜色 -->
+        <attr name="dbz_background_color" format="color" />
+        <!-- x、y轴线颜色 -->
+        <attr name="dbz_x_y_color" format="color" />
+        <!-- x、y轴上的文本颜色 -->
+        <attr name="dbz_x_y_text_color" format="color" />
+        <!-- x、y轴上的文本大小 -->
+        <attr name="dbz_x_y_text_size" format="dimension" />
+        <!-- 折线颜色 -->
+        <attr name="dbz_line_point_color" format="color" />
+        <!-- 折线点位颜色颜色 -->
+        <attr name="dbz_point_color" format="color" />
+        <!-- 折线宽度 -->
+        <attr name="dbz_line_width" format="dimension" />
+        <!-- 折线点位文字颜色 -->
+        <attr name="dbz_point_text_color" format="color" />
+        <!-- 折线点位文字大小 -->
+        <attr name="dbz_point_text_size" format="dimension" />
+        <!-- 折线点位之间的间距距离 -->
+        <attr name="dbz_point_interval" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="StockPriceView">
+        <!-- 背景颜色 -->
+        <attr name="background_color_dbz" format="color" />
+        <!-- x、y轴线颜色 -->
+        <attr name="x_y_color_dbz" format="color" />
+        <!-- x轴上的文本颜色 -->
+        <attr name="x_text_color_dbz" format="color" />
+        <!-- x轴上的文本颜色 -->
+        <attr name="y_text_color_dbz" format="color" />
+        <!-- x、y轴上的文本大小 -->
+        <attr name="x_text_size_dbz" format="dimension" />
+        <!-- y轴上的文本大小 -->
+        <attr name="y_text_size_dbz" format="dimension" />
+        <!-- 背景虚线颜色 -->
+        <attr name="dotted_line_dbz" format="color" />
+        <!-- 折线颜色 -->
+        <attr name="line_color_dbz" format="color" />
+        <!-- 折线内阴影颜色 -->
+        <attr name="line_shadow_color_dbz" format="color" />
+        <!-- 折线点位颜色颜色 -->
+        <attr name="point_color_dbz" format="color" />
+        <!-- 折线点位直线颜色 -->
+        <attr name="line_point_color_dbz" format="color" />
+        <!-- 折线宽度 -->
+        <attr name="line_width_dbz" format="dimension" />
+        <!-- 折线点位文字颜色 -->
+        <attr name="point_text_color_dbz" format="color" />
+        <!-- 折线点位文字大小 -->
+        <attr name="point_text_size_dbz" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RingChartVing">
+        <!-- 背景颜色 -->
+        <attr name="dbz_ring_background_color" format="color" />
+        <!-- 圆半径颜色 -->
+        <attr name="dbz_radius_color" format="color" />
+        <!-- 圆半径大小 -->
+        <attr name="dbz_circle_radius_size" format="dimension" />
+        <!-- 圆半径文本大小 -->
+        <attr name="dbz_circle_radius_text_size" format="dimension" />
+        <!-- 圆外半径大小 -->
+        <attr name="dbz_radius_size" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CollapsingAvatarToolbar">
+        <attr name="collapsedPadding" format="dimension" />
+        <attr name="expandedPadding" format="dimension" />
+
+        <attr name="collapsedImageSize" format="dimension" />
+        <attr name="expandedImageSize" format="dimension" />
+
+        <attr name="collapsedTextSize" format="dimension" />
+        <attr name="expandedTextSize" format="dimension" />
+
+        <attr name="collapsedTextColor" format="color" />
+        <attr name="expandedTextColor" format="color" />
+    </declare-styleable>
+
+</resources>

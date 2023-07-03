@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AndroidCollectionToolView</string>
+
+
+    <string name="album">相册</string>
+    <string name="not_select">未选择</string>
+    <string name="selected_picture">已选择: %d</string>
+    <string name="message_preview">信息预览</string>
+    <string name="recording_too_short">录制时间过短</string>
+    <string name="click_take_photo">单击拍照</string>
+    <string name="long_press_camera">长按摄像</string>
+    <string name="camera_missing_storage_permissions">缺少相机权限\n可能会导致不能使用摄像头功能</string>
+    <string name="photos_media_missing_storage_permissions">缺少存储权限\n访问您设备上的照片、媒体内容和文件</string>
+
+</resources>

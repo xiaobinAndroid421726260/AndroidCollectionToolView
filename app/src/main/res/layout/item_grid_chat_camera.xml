@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.luck.picture.lib.widget.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <com.dbz.view.view.RoundRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dbz_layout_radius="@dimen/dp_5">
+
+        <com.dbz.view.view.camera.CameraViewPreview
+            android:id="@+id/cameraView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/chat_photo"/>
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"/>
+
+    </com.dbz.view.view.RoundRelativeLayout>
+
+</com.luck.picture.lib.widget.SquareRelativeLayout>

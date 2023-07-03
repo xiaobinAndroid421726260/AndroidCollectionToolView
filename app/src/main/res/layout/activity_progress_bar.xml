@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProgressBarActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.dbz.view.view.CustomHorizontalProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        app:dbz_is_show_progress_text="true"
+        app:dbz_progress="50"
+        app:dbz_progress_bar_back_color="@color/color_bg"
+        app:dbz_progress_bar_text_color="@color/white"
+        app:dbz_progress_color="@color/blue_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <com.dbz.view.view.CustomHorizontalProgressBar
+        android:id="@+id/progress_bar2"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        app:dbz_is_show_progress_text="true"
+        app:dbz_progress="30"
+        app:dbz_progress_bar_back_color="@color/color_bg"
+        app:dbz_progress_color="@color/orange"
+        app:dbz_radius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar" />
+
+    <com.dbz.view.view.CustomHorizontalProgressBar
+        android:id="@+id/progress_bar3"
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="30dp"
+        app:dbz_is_show_progress_text="true"
+        app:dbz_progress="30"
+        app:dbz_progress_bar_back_color="@color/color_bg"
+        app:dbz_progress_color="@color/green_color"
+        app:dbz_radius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar2" />
+
+    <com.dbz.view.view.CustomHorizontalProgressBar
+        android:id="@+id/progress_bar4"
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar3" />
+
+    <com.dbz.view.view.CustomHorizontalProgressBar
+        android:id="@+id/progress_bar5"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="120dp"
+        app:dbz_progress_bar_back_color="@color/color_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar4" />
+
+    <com.dbz.view.view.CustomHorizontalProgressBar
+        android:id="@+id/progress_bar6"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="120dp"
+        app:dbz_progress_bar_back_color="@color/color_bg"
+        app:dbz_radius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar5" />
+
+    <com.dbz.view.view.DynamicProgressBar
+        android:id="@+id/dynamic_progress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:layout_marginTop="10dp"
+        app:dbz_back_drawable="@drawable/progress_revision"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar6" />
+
+    <com.dbz.view.view.DynamicProgressBar
+        android:id="@+id/dynamic_progress1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dynamic_progress" />
+
+    <com.dbz.view.view.DynamicProgressBar
+        android:id="@+id/dynamic_progress2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dynamic_progress1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

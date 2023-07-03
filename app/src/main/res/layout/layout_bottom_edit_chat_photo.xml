@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_bottom_send_edit"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#E3E3E5"
+    android:paddingTop="@dimen/dp_2"
+    android:paddingBottom="@dimen/dp_5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llEditSpeak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:layout_marginBottom="@dimen/dp_6"
+        android:background="@drawable/shape_white_radius_20"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请添加说明"
+            android:maxLength="3000"
+            android:maxLines="8"
+            android:minHeight="@dimen/dp_20"
+            android:paddingStart="@dimen/dp_6"
+            android:paddingEnd="@dimen/dp_6"
+            android:textSize="@dimen/dp_16"
+            android:visibility="visible" />
+
+<!--        <com.dbz.view.view.panel.AtUserEditText-->
+<!--            android:id="@+id/editText"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:layout_marginStart="@dimen/dp_8"-->
+<!--            android:layout_marginTop="@dimen/dp_6"-->
+<!--            android:layout_marginBottom="@dimen/dp_6"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@null"-->
+<!--            android:hint="请添加说明"-->
+<!--            android:maxLength="3000"-->
+<!--            android:maxLines="8"-->
+<!--            android:minHeight="@dimen/dp_20"-->
+<!--            android:paddingStart="@dimen/dp_6"-->
+<!--            android:paddingEnd="@dimen/dp_6"-->
+<!--            android:textSize="@dimen/dp_16"-->
+<!--            android:visibility="visible" />-->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/emotionImageView"
+            tools:visibility="visible"
+            android:layout_width="@dimen/dp_28"
+            android:layout_height="@dimen/dp_28"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:src="@drawable/icon_chat_emo" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

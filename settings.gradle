@@ -1,0 +1,32 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+rootProject.name = "AndroidCollectionToolView"
+include ':app'
+include ':LocalPackage:AutoSize_aar'
+//include ':LocalPackage:CircleImageView_aar'
+include ':LocalPackage:SmartRefreshLayout_aar'
+include ':LocalPackage:SmartRefreshHeader_aar'
+
+
+enableFeaturePreview('VERSION_CATALOGS')
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            from(files("libs.versions.toml"))
+        }
+    }
+}

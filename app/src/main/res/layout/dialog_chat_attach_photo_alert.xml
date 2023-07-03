@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dbz.view.view.panel.InputAwareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.dbz.view.view.panel.ChatPhotoAlertNestedScrollingParent
+            android:id="@+id/nestedScrolling"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view_space"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_180" />
+
+            <FrameLayout
+                android:id="@+id/fl_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:background="@color/blue_color"
+                android:visibility="invisible">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/actionBarItemBackground"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/onback_white" />
+
+                <LinearLayout
+                    android:id="@+id/llTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/dp_12"
+                    android:paddingEnd="@dimen/dp_12">
+
+                    <com.luck.picture.lib.widget.MarqueeTextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxEms="6"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="相册"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dp_17" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:src="@drawable/icon_down_album" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_scroll_bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_bottom_top_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dp_24"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_select_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:drawablePadding="@dimen/dp_6"
+                        android:paddingTop="@dimen/dp_10"
+                        android:paddingBottom="@dimen/dp_8"
+                        android:text="未选择"
+                        android:textColor="#969799"
+                        android:textSize="@dimen/dp_16"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+                    android:clipChildren="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_bottom_top_title">
+
+                    <com.luck.picture.lib.widget.RecyclerPreloadView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@color/white"
+                        android:clipToPadding="false"
+                        android:paddingBottom="60dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView_preview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@color/white"
+                        android:clipToPadding="false"
+                        android:paddingBottom="60dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <include
+                        android:id="@+id/empty_layout"
+                        layout="@layout/layout_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.dbz.view.view.panel.ChatPhotoAlertNestedScrollingParent>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_bottom_send_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/emotionContainerFrameLayout">
+
+            <include
+                android:id="@+id/layout_bottom_edit"
+                layout="@layout/layout_bottom_edit_chat_photo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cl_send_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/view_bottom_send_bg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#E3E3E5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/layout_bottom_edit"
+                app:layout_constraintTop_toTopOf="@+id/layout_bottom_edit" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_send_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/sendButton"
+                    android:layout_width="@dimen/dp_65"
+                    android:layout_height="@dimen/dp_65"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:src="@drawable/icon_chat_send"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_marginEnd="@dimen/dp_3"
+                    android:background="@drawable/shape_photo_album_num_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_1"
+                        android:background="@drawable/shape_photo_album_text_num_bg"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dp_14"
+                        tools:text="1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--表情拓展弹窗-->
+        <com.dbz.view.view.panel.KeyboardHeightFrameLayout
+            android:id="@+id/emotionContainerFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_custom_keyboard_size"
+            android:background="#F3F3F3"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <FrameLayout
+                android:id="@+id/fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+<!--            <com.vanniktech.emoji.EmojiView-->
+<!--                android:id="@+id/emojiView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent" />-->
+
+        </com.dbz.view.view.panel.KeyboardHeightFrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.dbz.view.view.panel.InputAwareLayout>
